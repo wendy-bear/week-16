@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id="result"></div><br>
+  <div id="result_increase"></div><br>
+  <div id="result_sum"></div>
+
+<script>
+          function sumInput() {
+          let numbers = [];
+          
+          while (true) {
+            let input = prompt("Введите число");
+            if((input === "" || input == false || input === null || input === NaN || !isFinite(input))) break;
+            numbers.push(+input);
+          } 
+          
+          document.getElementById("result").innerHTML = numbers;
+
+          function sortFunction() {
+          numbers.sort(function(a, b){return a - b});
+          document.getElementById("result_increase").innerHTML = numbers;}
+          sortFunction()
+
+          let sumArray = 0;
+          for (let number of numbers) {
+          sumArray = sumArray + number;
+          }
+          document.getElementById("result_sum").innerHTML = sumArray;
+          return sumArray;
+}     
+          alert(sumInput());
+
+</script>
+</body>
+</html>
