@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/калькулятор/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="calc">
+            <div class="calc_header">Калькулятор стоимости авто</div>
+                <div class="calc_list">
+                    <label>Марка машины:
+                        <select name="" id="carname" onchange="selectName()">
+                            <option value="80">Audi</option>
+                            <option value="100">Bentley</option>
+                            <option value="150">Tesla</option>
+                        </select>
+                    </label>
+
+                    <div id="gearfuel-type"></div>
+                    <div id="gearfuel-type1"></div>
+                    <div id="power-reserve"></div>
+                   
+                    <label>Состояние машины:<br>
+                        <input type="radio" name="condition" id="newcar" value="20">Новая<br>
+                        <input type="radio" name="condition" id="usecar" value="-2">С пробегом<br>
+                    </label>
+                    <label>Нюансы:<br>
+                        <input type="checkbox" name="dtp" id="DTP" value="-5">После ДТП<br>
+                        <input type="checkbox" name="repaint" id="repainting" value="-5">Перекраска<br>
+                        <input type="checkbox" name="mindamage" id="mindamage" value="-5">Мелкие внешние повреждения<br>
+                         </label>    
+                </div>
+                <div class="calc_result">
+            <button type="button" class="calc_btn" onclick="calcSum()">Рассчитать</button>
+                </div>
+        </div>
+    </div>    
+
+   
+    <script src="/калькулятор/index.js"></script>
+</body>
+</html>
